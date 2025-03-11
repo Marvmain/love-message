@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+
+        .message-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #FF69B4;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        h1:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1 id="love-message" onclick="changeMessage()">Click to receive love ❤️</h1>
+    </div>
+
+    <script>
+        function changeMessage() {
+            const messages = [
+                "I love you to the moon and back 🌙💖",
+                "You make my heart skip a beat 💓",
+                "Forever and always, my love ❤️",
+                "You complete me 💑",
+                "Together, we are unstoppable 💪💘",
+            ];
+
+            // Pick a random message from the array
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Change the content of the love message
+            document.getElementById("love-message").innerText = randomMessage;
+        }
+    </script>
+</body>
+</html>
+
